@@ -20,6 +20,8 @@
 		AF7A897A242BC2D500DF187C /* ComicUserBackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */; };
 		AF7A897C242BC32D00DF187C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A897B242BC32D00DF187C /* SampleData.swift */; };
 		AF7A897F242BC53500DF187C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A897E242BC53500DF187C /* Constants.swift */; };
+		AF7A8982242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8981242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift */; };
+		AF7A8984242BC76300DF187C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8983242BC76300DF187C /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicUserBackgroundTask.swift; sourceTree = "<group>"; };
 		AF7A897B242BC32D00DF187C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		AF7A897E242BC53500DF187C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF7A8981242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicUserBackgroundTaskListView.swift; sourceTree = "<group>"; };
+		AF7A8983242BC76300DF187C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +165,8 @@
 		AF7A8975242BC24A00DF187C /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A8976242BC27100DF187C /* ComicUserBackgroundButton.swift */,
+				AF7A8980242BC68F00DF187C /* Elements */,
+				AF7A8981242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */,
 				AF7A897B242BC32D00DF187C /* SampleData.swift */,
+				AF7A8983242BC76300DF187C /* App.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +187,14 @@
 				AF7A897E242BC53500DF187C /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AF7A8980242BC68F00DF187C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A8976242BC27100DF187C /* ComicUserBackgroundButton.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +329,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7A897A242BC2D500DF187C /* ComicUserBackgroundTask.swift in Sources */,
+				AF7A8982242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift in Sources */,
 				AF7A897C242BC32D00DF187C /* SampleData.swift in Sources */,
+				AF7A8984242BC76300DF187C /* App.swift in Sources */,
 				AF7A8941242BC18900DF187C /* AppDelegate.swift in Sources */,
 				AF7A897F242BC53500DF187C /* Constants.swift in Sources */,
 				AF7A8974242BC23D00DF187C /* ComicDetailView.swift in Sources */,
