@@ -11,6 +11,7 @@ import SwiftUI
 struct ComicDetailView: View {
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
+            ZStack(alignment: .bottom) {
             ScrollView {
                 VStack {
                     ComicDetailHeaderView()
@@ -19,6 +20,10 @@ struct ComicDetailView: View {
                         .frame(height: container.size.height * 0.5)
                     Spacer()
                 }
+            }
+
+                ComicDetailCycleBarView()
+                .frame(height: container.size.height * 0.1)
             }
             .padding(.vertical, container.size.height * 0.07)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
