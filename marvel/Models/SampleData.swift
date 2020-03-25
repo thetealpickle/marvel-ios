@@ -11,7 +11,7 @@ import Foundation
 class SampleData {
     static let instance = SampleData()
     
-    let userBackgroundTasks: [ComicUserBackTask] = [
-        ComicUserBackTask(title: "Add to Library", systemImageName: "checkmark.circle.fill")
+    let userBackgroundTasks: [ComicUserBackgroundTask] = [
+        ComicUserBackgroundTask(id: 0, title: "Add to Library", systemImageName: "checkmark.circle.fill")
     ]
 }

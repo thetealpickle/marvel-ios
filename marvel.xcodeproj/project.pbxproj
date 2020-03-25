@@ -17,7 +17,7 @@
 		AF7A8972242BC22B00DF187C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8971242BC22B00DF187C /* RootView.swift */; };
 		AF7A8974242BC23D00DF187C /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8973242BC23D00DF187C /* ComicDetailView.swift */; };
 		AF7A8977242BC27100DF187C /* ComicUserBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8976242BC27100DF187C /* ComicUserBackgroundButton.swift */; };
-		AF7A897A242BC2D500DF187C /* ComicUserBackTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8979242BC2D500DF187C /* ComicUserBackTask.swift */; };
+		AF7A897A242BC2D500DF187C /* ComicUserBackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */; };
 		AF7A897C242BC32D00DF187C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A897B242BC32D00DF187C /* SampleData.swift */; };
 		AF7A897F242BC53500DF187C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A897E242BC53500DF187C /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		AF7A8971242BC22B00DF187C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		AF7A8973242BC23D00DF187C /* ComicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailView.swift; sourceTree = "<group>"; };
 		AF7A8976242BC27100DF187C /* ComicUserBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicUserBackgroundButton.swift; sourceTree = "<group>"; };
-		AF7A8979242BC2D500DF187C /* ComicUserBackTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicUserBackTask.swift; sourceTree = "<group>"; };
+		AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicUserBackgroundTask.swift; sourceTree = "<group>"; };
 		AF7A897B242BC32D00DF187C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		AF7A897E242BC53500DF187C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,7 +169,7 @@
 		AF7A8978242BC2C900DF187C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A8979242BC2D500DF187C /* ComicUserBackTask.swift */,
+				AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */,
 				AF7A897B242BC32D00DF187C /* SampleData.swift */,
 			);
 			path = Models;
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7A897A242BC2D500DF187C /* ComicUserBackTask.swift in Sources */,
+				AF7A897A242BC2D500DF187C /* ComicUserBackgroundTask.swift in Sources */,
 				AF7A897C242BC32D00DF187C /* SampleData.swift in Sources */,
 				AF7A8941242BC18900DF187C /* AppDelegate.swift in Sources */,
 				AF7A897F242BC53500DF187C /* Constants.swift in Sources */,

@@ -8,11 +8,13 @@
 
 import Foundation
 
-struct ComicUserBackTask {
+struct ComicUserBackgroundTask {
+    var id: Int
     var imageName: String
     var title: String
     
-    init(title: String, systemImageName imageName: String) {
+    init(id: Int, title: String, systemImageName imageName: String) {
+        self.id = id
         self.title = title.uppercased()
         self.imageName = imageName
     }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ComicUserBackgroundButton: View {
-    var data: ComicUserBackTask
+    var data: ComicUserBackgroundTask
     
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
