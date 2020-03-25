@@ -14,6 +14,7 @@ struct ComicDetailHeaderView: View {
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
             ZStack {
+//                Image(self.comic.Image)
                 HStack {
                     Image("")
                         .resizable()
@@ -31,7 +32,7 @@ struct ComicDetailHeaderView: View {
                             }
                             .padding()
                             .frame(width: actionContainer.size.width)
-                            .background(Color.purple)
+                            .background(Color("AccentColor"))
                             
                             ComicUserBackgroundTaskListView()
                         }

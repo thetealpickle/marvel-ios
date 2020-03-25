@@ -27,6 +27,8 @@ struct ComicUserBackgroundButton: View {
             }
             .padding(.vertical, container.size.height * 0.26)
             .padding(.horizontal)
+        .background(Color("PrimarySystemColor"))
+        .foregroundColor(Color("PrimaryTextColor"))
         }
     }
 }
