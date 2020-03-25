@@ -10,7 +10,20 @@ import SwiftUI
 
 struct ComicDetailView: View {
     var body: some View {
-        Text("Hello, World!")
+        GeometryReader { (container: GeometryProxy) in
+            ScrollView {
+                VStack {
+                    ComicDetailHeaderView()
+                        .frame(height: container.size.height * 0.3)
+                    ComicDetailMetadataView()
+                        .frame(height: container.size.height * 0.5)
+                    Spacer()
+                }
+            }
+            .padding(.vertical, container.size.height * 0.07)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
