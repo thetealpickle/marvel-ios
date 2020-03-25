@@ -24,6 +24,8 @@
 		AF7A8984242BC76300DF187C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8983242BC76300DF187C /* App.swift */; };
 		AF7A8988242BC9A900DF187C /* ComicDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8987242BC9A900DF187C /* ComicDetailHeaderView.swift */; };
 		AF7A898A242BCA0000DF187C /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8989242BCA0000DF187C /* Comic.swift */; };
+		AF7A898C242BCD1600DF187C /* ComicDetailMetadataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A898B242BCD1600DF187C /* ComicDetailMetadataView.swift */; };
+		AF7A898E242BCE4600DF187C /* ComicDetailSubdataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A898D242BCE4600DF187C /* ComicDetailSubdataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		AF7A8983242BC76300DF187C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		AF7A8987242BC9A900DF187C /* ComicDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailHeaderView.swift; sourceTree = "<group>"; };
 		AF7A8989242BCA0000DF187C /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		AF7A898B242BCD1600DF187C /* ComicDetailMetadataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailMetadataView.swift; sourceTree = "<group>"; };
+		AF7A898D242BCE4600DF187C /* ComicDetailSubdataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailSubdataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 			children = (
 				AF7A8981242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift */,
 				AF7A8987242BC9A900DF187C /* ComicDetailHeaderView.swift */,
+				AF7A898B242BCD1600DF187C /* ComicDetailMetadataView.swift */,
+				AF7A898D242BCE4600DF187C /* ComicDetailSubdataView.swift */,
 			);
 			path = ComicDetail;
 			sourceTree = "<group>";
@@ -352,9 +358,11 @@
 			files = (
 				AF7A8988242BC9A900DF187C /* ComicDetailHeaderView.swift in Sources */,
 				AF7A898A242BCA0000DF187C /* Comic.swift in Sources */,
+				AF7A898E242BCE4600DF187C /* ComicDetailSubdataView.swift in Sources */,
 				AF7A897A242BC2D500DF187C /* ComicUserBackgroundTask.swift in Sources */,
 				AF7A8982242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift in Sources */,
 				AF7A897C242BC32D00DF187C /* SampleData.swift in Sources */,
+				AF7A898C242BCD1600DF187C /* ComicDetailMetadataView.swift in Sources */,
 				AF7A8984242BC76300DF187C /* App.swift in Sources */,
 				AF7A8941242BC18900DF187C /* AppDelegate.swift in Sources */,
 				AF7A897F242BC53500DF187C /* Constants.swift in Sources */,
