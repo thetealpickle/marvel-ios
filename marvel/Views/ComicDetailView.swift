@@ -15,7 +15,9 @@ struct ComicDetailView: View {
             ScrollView {
                 VStack {
                     ComicDetailHeaderView()
+                        .padding(.bottom, container.size.width * 0.1)
                         .frame(height: container.size.height * 0.3)
+
                     ComicDetailMetadataView()
                         .frame(height: container.size.height * 0.5)
                     Spacer()

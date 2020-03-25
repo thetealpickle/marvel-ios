@@ -28,7 +28,7 @@ struct ComicDetailHeaderView: View {
                             }) {
                                 Text("READ NOW")
                                     .font(getHeadlineFontWithContainerSize(container.size.width))
-                                
+                                .foregroundColor(Color("PrimaryTextColor"))
                             }
                             .padding()
                             .frame(width: actionContainer.size.width)
@@ -38,7 +38,7 @@ struct ComicDetailHeaderView: View {
                         }
                     }
                 }
-            .padding()
+                .padding()
             }
         }
     }
@@ -49,6 +49,7 @@ struct ComicDetailHeaderView_Previews: PreviewProvider {
         GeometryReader { (container: GeometryProxy) in
             ComicDetailHeaderView()
                 .frame(height: container.size.height * 0.3)
+
         }
     }
 }
