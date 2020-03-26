@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RootView: View {
-    @State var stri: String = "bitch"
+    @State var stri: String = "loading"
     @State var showMainView: Bool = false
     
     var body: some View {
