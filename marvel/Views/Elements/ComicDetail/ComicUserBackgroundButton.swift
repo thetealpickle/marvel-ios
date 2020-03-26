@@ -15,20 +15,22 @@ struct ComicUserBackgroundButton: View {
         GeometryReader { (container: GeometryProxy) in
             HStack(alignment: .center,
                    spacing: container.size.width * 0.03) {
-                Image(systemName: self.data.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.vertical, container.size.width * 0.015)
-                RoundedRectangle(cornerRadius: container.size.width * 0.01)
-                    .frame(width: container.size.width * 0.01)
+                    Image(systemName: self.data.imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.vertical, container.size.width * 0.015)
+                    RoundedRectangle(cornerRadius: container.size.width * 0.01)
+                        .frame(width: container.size.width * 0.01)
                     Text(self.data.title)
-                        .font(getHeadlineFontWithContainerSize(container.size.width))
-                Spacer()
+                        .font(getHeadlineFontWithContainerSize(container.size.width * 0.12))
+                        .fixedSize(horizontal: true, vertical: false)
+                    Spacer()
             }
             .padding(.vertical, container.size.height * 0.26)
             .padding(.horizontal)
-        .background(Color("PrimarySystemColor"))
-        .foregroundColor(Color("PrimaryTextColor"))
+            .frame(width: container.size.width)
+            .background(Color("PrimarySystemColor"))
+            .foregroundColor(Color("PrimaryTextColor"))
         }
     }
 }
@@ -37,7 +39,8 @@ struct ComicUserBackgroundButton_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { (container: GeometryProxy) in
             ComicUserBackgroundButton(data: SampleData.instance.userBackgroundTasks[0])
-                .frame(height: container.size.height * 0.15)
+                .frame(width: container.size.width,
+                       height: container.size.height * 0.15)
         }
     }
 }

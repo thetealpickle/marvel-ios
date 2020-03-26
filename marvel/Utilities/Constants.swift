@@ -11,13 +11,20 @@ import SwiftUI
 // MARK: Font Stylizing
 
 let HEADLINE_FONT = "Roboto-Black"
+let BODY_FONT = "Roboto-Regular"
+
 let HEADLINE_FONT_WIDTH_SCALE: CGFloat = 0.6
+let BODY_FONT_WIDTH_SCALE: CGFloat = 0.9
 
 func getHeadlineFontWithContainerSize(_ size: CGFloat) -> Font {
     let scaledSize = UIFontMetrics.default.scaledValue(for: (size * HEADLINE_FONT_WIDTH_SCALE))
     return Font.custom(HEADLINE_FONT, size: scaledSize)
 }
 
+func getBodyFontWithContainerSize(_ size: CGFloat) -> Font {
+    let scaledSize = UIFontMetrics.default.scaledValue(for: (size * BODY_FONT_WIDTH_SCALE))
+    return Font.custom(BODY_FONT, size: scaledSize)
+}
 
 // MARK: Networking
 let BASE_URL = "https://gateway.marvel.com:443/"
