@@ -8,7 +8,6 @@
 
 import Foundation
 
-// MARK: Enums
 enum ComicCycleType: String {
     case previous
     case next
