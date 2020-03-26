@@ -32,6 +32,8 @@
 		AF7A9DA3242CF1C50005EBD6 /* X10+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA2242CF1C50005EBD6 /* X10+String.swift */; };
 		AF7A9DA6242CF4C40005EBD6 /* ComicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA5242CF4C40005EBD6 /* ComicImage.swift */; };
 		AF7A9DA8242CFADE0005EBD6 /* ComicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */; };
+		AF7A9DAB242D13B90005EBD6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9DAA242D13B90005EBD6 /* Roboto-Black.ttf */; };
+		AF7A9DAD242D13CD0005EBD6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9DAC242D13CD0005EBD6 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		AF7A9DA2242CF1C50005EBD6 /* X10+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "X10+String.swift"; sourceTree = "<group>"; };
 		AF7A9DA5242CF4C40005EBD6 /* ComicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicImage.swift; sourceTree = "<group>"; };
 		AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListView.swift; sourceTree = "<group>"; };
+		AF7A9DAA242D13B90005EBD6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		AF7A9DAC242D13CD0005EBD6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,7 @@
 		AF7A8990242BDCF900DF187C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A9DA9242D13A50005EBD6 /* Fonts */,
 				AF7A894B242BC18900DF187C /* LaunchScreen.storyboard */,
 				AF7A8946242BC18900DF187C /* Assets.xcassets */,
 			);
@@ -272,6 +277,15 @@
 				AF7A9DA5242CF4C40005EBD6 /* ComicImage.swift */,
 			);
 			path = Comic;
+			sourceTree = "<group>";
+		};
+		AF7A9DA9242D13A50005EBD6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A9DAC242D13CD0005EBD6 /* Roboto-Regular.ttf */,
+				AF7A9DAA242D13B90005EBD6 /* Roboto-Black.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,7 +400,9 @@
 			files = (
 				AF7A894D242BC18900DF187C /* LaunchScreen.storyboard in Resources */,
 				AF7A894A242BC18900DF187C /* Preview Assets.xcassets in Resources */,
+				AF7A9DAD242D13CD0005EBD6 /* Roboto-Regular.ttf in Resources */,
 				AF7A8947242BC18900DF187C /* Assets.xcassets in Resources */,
+				AF7A9DAB242D13B90005EBD6 /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

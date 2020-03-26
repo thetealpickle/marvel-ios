@@ -15,38 +15,35 @@ struct ComicDetailView: View {
     
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
-            ZStack(alignment: .bottom) {
-                ScrollView {
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                self.presentation.wrappedValue.dismiss()
-                            }) {
-                                Image(systemName: "x.mark")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            }
-                            .padding()
-                            .frame(width: container.size.width * 0.1)
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            self.presentation.wrappedValue.dismiss()
+                        }) {
+                            Image(systemName: "xmark")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                         }
-                        .frame(height: container.size.height * 0.1)
+                        .padding()
+                        .frame(width: container.size.width * 0.12)
+                        .foregroundColor(Color("PrimaryTextColor"))
+                    }
+                    .frame(height: container.size.height * 0.1)
+                    .padding(.horizontal)
+                    ScrollView(.vertical, showsIndicators: false) {
                         ComicDetailHeaderView()
                             .environmentObject(self.comic)
                             .frame(height: container.size.height * 0.3)
-                        
-                        
                         ComicDetailMetadataView()
                             .environmentObject(self.comic)
                             .frame(height: container.size.height * 0.5)
+                        ComicDetailCycleBarView()
+                        .frame(height: container.size.height * 0.1)
                         Spacer()
                     }
-                }
-                
-                ComicDetailCycleBarView()
-                    .frame(height: container.size.height * 0.1)
             }
-            .padding(.vertical, container.size.height * 0.1)
+            .padding(.vertical, container.size.height * 0.08)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("PrimarySystemColor"))
             .edgesIgnoringSafeArea(.all)

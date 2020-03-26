@@ -25,6 +25,7 @@ struct ComicDetailMetadataView: View {
                     ComicDetailSubdataView(title: "Interior")
                         .frame(width: container.size.width * 0.4)
                 }
+            .foregroundColor(Color("PrimaryTextColor"))
             }
             .padding()
         }

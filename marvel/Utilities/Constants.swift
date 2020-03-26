@@ -9,8 +9,13 @@
 import SwiftUI
 
 // MARK: Font Stylizing
+
+let HEADLINE_FONT = "Roboto-Black"
+let HEADLINE_FONT_WIDTH_SCALE: CGFloat = 0.6
+
 func getHeadlineFontWithContainerSize(_ size: CGFloat) -> Font {
-    return Font.headline
+    let scaledSize = UIFontMetrics.default.scaledValue(for: (size * HEADLINE_FONT_WIDTH_SCALE))
+    return Font.custom(HEADLINE_FONT, size: scaledSize)
 }
 
 
