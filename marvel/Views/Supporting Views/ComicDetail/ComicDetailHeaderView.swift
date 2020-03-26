@@ -33,7 +33,7 @@ struct ComicDetailHeaderView: View {
                                 print("read now HUMANNNN")
                             }) {
                                 Text("READ NOW")
-                                    .font(getHeadlineFontWithContainerSize(container.size.width * 0.08))
+                                    .font(getHeadlineFontWithContainerSize(container.size.width))
                                     .fixedSize(horizontal: true, vertical: false)
                                     .foregroundColor(Color("PrimaryTextColor"))
                             }

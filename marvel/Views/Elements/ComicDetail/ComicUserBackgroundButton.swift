@@ -22,7 +22,7 @@ struct ComicUserBackgroundButton: View {
                     RoundedRectangle(cornerRadius: container.size.width * 0.01)
                         .frame(width: container.size.width * 0.01)
                     Text(self.data.title)
-                        .font(getHeadlineFontWithContainerSize(container.size.width * 0.12))
+                        .font(getHeadlineFontWithContainerSize(container.size.width))
                         .fixedSize(horizontal: true, vertical: false)
                     Spacer()
             }

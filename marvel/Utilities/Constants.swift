@@ -13,8 +13,8 @@ import SwiftUI
 let HEADLINE_FONT = "Roboto-Black"
 let BODY_FONT = "Roboto-Regular"
 
-let HEADLINE_FONT_WIDTH_SCALE: CGFloat = 0.6
-let BODY_FONT_WIDTH_SCALE: CGFloat = 0.9
+let HEADLINE_FONT_WIDTH_SCALE: CGFloat = 0.06
+let BODY_FONT_WIDTH_SCALE: CGFloat = 0.04
 
 func getHeadlineFontWithContainerSize(_ size: CGFloat) -> Font {
     let scaledSize = UIFontMetrics.default.scaledValue(for: (size * HEADLINE_FONT_WIDTH_SCALE))

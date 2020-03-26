@@ -34,6 +34,8 @@
 		AF7A9DA8242CFADE0005EBD6 /* ComicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */; };
 		AF7A9DAB242D13B90005EBD6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9DAA242D13B90005EBD6 /* Roboto-Black.ttf */; };
 		AF7A9DAD242D13CD0005EBD6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9DAC242D13CD0005EBD6 /* Roboto-Regular.ttf */; };
+		AF7A9DAF242D1A200005EBD6 /* ComicCycleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DAE242D1A200005EBD6 /* ComicCycleButton.swift */; };
+		AF7A9DB2242D1A850005EBD6 /* ComicCycleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DB1242D1A850005EBD6 /* ComicCycleType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListView.swift; sourceTree = "<group>"; };
 		AF7A9DAA242D13B90005EBD6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		AF7A9DAC242D13CD0005EBD6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		AF7A9DAE242D1A200005EBD6 /* ComicCycleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCycleButton.swift; sourceTree = "<group>"; };
+		AF7A9DB1242D1A850005EBD6 /* ComicCycleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCycleType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +202,8 @@
 		AF7A8978242BC2C900DF187C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A9DB0242D1A580005EBD6 /* View Models */,
 				AF7A9DA4242CF4AE0005EBD6 /* Comic */,
-				AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */,
 				AF7A897B242BC32D00DF187C /* SampleData.swift */,
 				AF7A8983242BC76300DF187C /* App.swift */,
 				AF7A8994242BE3F300DF187C /* Model.swift */,
@@ -239,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7A8976242BC27100DF187C /* ComicUserBackgroundButton.swift */,
+				AF7A9DAE242D1A200005EBD6 /* ComicCycleButton.swift */,
 			);
 			path = ComicDetail;
 			sourceTree = "<group>";
@@ -286,6 +291,15 @@
 				AF7A9DAA242D13B90005EBD6 /* Roboto-Black.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF7A9DB0242D1A580005EBD6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A8979242BC2D500DF187C /* ComicUserBackgroundTask.swift */,
+				AF7A9DB1242D1A850005EBD6 /* ComicCycleType.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,12 +451,14 @@
 				AF7A8995242BE3F300DF187C /* Model.swift in Sources */,
 				AF7A9DA8242CFADE0005EBD6 /* ComicListView.swift in Sources */,
 				AF7A898C242BCD1600DF187C /* ComicDetailMetadataView.swift in Sources */,
+				AF7A9DB2242D1A850005EBD6 /* ComicCycleType.swift in Sources */,
 				AF7A8984242BC76300DF187C /* App.swift in Sources */,
 				AF7A8941242BC18900DF187C /* AppDelegate.swift in Sources */,
 				AF7A9DA6242CF4C40005EBD6 /* ComicImage.swift in Sources */,
 				AF7A897F242BC53500DF187C /* Constants.swift in Sources */,
 				AF7A8974242BC23D00DF187C /* ComicDetailView.swift in Sources */,
 				AF7A8943242BC18900DF187C /* SceneDelegate.swift in Sources */,
+				AF7A9DAF242D1A200005EBD6 /* ComicCycleButton.swift in Sources */,
 				AF7A8977242BC27100DF187C /* ComicUserBackgroundButton.swift in Sources */,
 				AF7A9DA3242CF1C50005EBD6 /* X10+String.swift in Sources */,
 				AF7A8972242BC22B00DF187C /* RootView.swift in Sources */,

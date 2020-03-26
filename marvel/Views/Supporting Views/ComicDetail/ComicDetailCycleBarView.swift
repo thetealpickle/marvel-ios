@@ -11,21 +11,22 @@ import SwiftUI
 struct ComicDetailCycleBarView: View {
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
-            HStack {
-                Text("Previous")
-                    .padding()
-                Spacer()
-                Text("Next")
-                .padding()
-                
+            HStack(alignment: .center,
+                   spacing: container.size.width * 0.3) {
+                ComicCycleButton(type: .previous)
+                ComicCycleButton(type: .next)
             }
-        .padding()
+            .padding()
         }
     }
 }
 
 struct ComicDetailCycleBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ComicDetailCycleBarView()
+        GeometryReader { (container: GeometryProxy) in
+            ComicDetailCycleBarView()
+                .frame(width: container.size.width,
+                       height: container.size.height * 0.1)
+        }
     }
 }
