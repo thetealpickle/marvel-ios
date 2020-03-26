@@ -15,6 +15,7 @@ struct ComicDetailView: View {
     
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     HStack {
                         Spacer()
@@ -29,19 +30,18 @@ struct ComicDetailView: View {
                         .frame(width: container.size.width * 0.12)
                         .foregroundColor(Color("PrimaryTextColor"))
                     }
-                    .frame(height: container.size.height * 0.1)
-                    .padding(.horizontal)
-                    ScrollView(.vertical, showsIndicators: false) {
-                        ComicDetailHeaderView()
-                            .environmentObject(self.comic)
-                            .frame(height: container.size.height * 0.3)
-                        ComicDetailMetadataView()
-                            .environmentObject(self.comic)
-                            .frame(height: container.size.height * 0.5)
-                        ComicDetailCycleBarView()
+                    .padding([.horizontal, .bottom])
+                    ComicDetailHeaderView()
+                        .environmentObject(self.comic)
+                        .frame(height: container.size.height * 0.3)
+                    ComicDetailMetadataView()
+                        .environmentObject(self.comic)
+                        .frame(width: container.size.width * 0.9,
+                               height: container.size.height * 0.5)
+                    ComicDetailCycleBarView()
                         .frame(height: container.size.height * 0.1)
-                        Spacer()
-                    }
+                    Spacer()
+                }
             }
             .padding(.vertical, container.size.height * 0.08)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
