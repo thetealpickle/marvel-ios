@@ -23,6 +23,8 @@ struct RootView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("PrimarySystemColor"))
+            .edgesIgnoringSafeArea(.all)
             .onAppear {
                 Model.instance.getComics { (error) in
                     if error == nil {

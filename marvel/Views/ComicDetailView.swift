@@ -18,7 +18,6 @@ struct ComicDetailView: View {
                     VStack {
                         ComicDetailHeaderView()
                             .environmentObject(self.comic)
-                            .padding(.bottom, container.size.width * 0.1)
                             .frame(height: container.size.height * 0.3)
                         
                         
@@ -32,7 +31,7 @@ struct ComicDetailView: View {
                 ComicDetailCycleBarView()
                     .frame(height: container.size.height * 0.1)
             }
-            .padding(.vertical, container.size.height * 0.07)
+            .padding(.vertical, container.size.height * 0.1)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("PrimarySystemColor"))
             .edgesIgnoringSafeArea(.all)
@@ -42,6 +41,6 @@ struct ComicDetailView: View {
 
 struct ComicDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ComicDetailView(comic: Model.instance.comics[0])
+        ComicDetailView(comic: SampleData.instance.comics[0])
     }
 }

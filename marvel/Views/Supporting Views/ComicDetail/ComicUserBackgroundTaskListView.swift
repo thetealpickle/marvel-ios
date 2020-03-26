@@ -17,7 +17,6 @@ struct ComicUserBackgroundTaskListView: View {
             VStack {
                 ForEach(App.instance.userBackgroundTasks, id: \.self.id) { task in
                     ComicUserBackgroundButton(data: task)
-                        .frame(height: container.size.height / self.taskCount)
                 }
             }
         }

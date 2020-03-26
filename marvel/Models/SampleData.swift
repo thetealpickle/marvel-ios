@@ -14,4 +14,8 @@ class SampleData {
     let userBackgroundTasks: [ComicUserBackgroundTask] = [
         ComicUserBackgroundTask(id: 0, title: "Add to Library", systemImageName: "checkmark.circle.fill")
     ]
+    
+    let comics: [Comic] = [
+        Comic(id: 0, title: "some comic title", description: "some comics dedscription")
+    ]
 }
