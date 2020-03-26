@@ -14,10 +14,10 @@ struct ComicDetailMetadataView: View {
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
             VStack(alignment: .leading) {
-                Text("Comic Title")
+                Text(self.comic.title ?? "Comic Title")
                 RoundedRectangle(cornerRadius: 30.0)
                     .frame(height: 2.5)
-                Text("Comic Description")
+                Text(self.comic.description ?? "Comic Description")
                     .fixedSize(horizontal: false, vertical: true)
                 HStack(alignment: .center) {
                     ComicDetailSubdataView(title: "Cover")

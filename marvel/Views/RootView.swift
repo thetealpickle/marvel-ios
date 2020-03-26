@@ -9,8 +9,28 @@
 import SwiftUI
 
 struct RootView: View {
+    @State var stri: String = "bitch"
+    @State var showMainView: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { (container: GeometryProxy) in
+            ZStack {
+                if self.showMainView {
+                    ComicListView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    Text(self.stri)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .onAppear {
+                Model.instance.getComics { (error) in
+                    if error == nil {
+                        self.showMainView = true
+                    }
+                }
+            }
+        }
     }
 }
 

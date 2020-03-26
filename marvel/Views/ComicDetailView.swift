@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ComicDetailView: View {
+    var comic: Comic
+    
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
             ZStack(alignment: .bottom) {
@@ -19,6 +21,7 @@ struct ComicDetailView: View {
                         .frame(height: container.size.height * 0.3)
 
                     ComicDetailMetadataView()
+                        .environmentObject(self.comic)
                         .frame(height: container.size.height * 0.5)
                     Spacer()
                 }
@@ -36,6 +39,6 @@ struct ComicDetailView: View {
 
 struct ComicDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ComicDetailView()
+        ComicDetailView(comic: Model.instance.comics[0])
     }
 }

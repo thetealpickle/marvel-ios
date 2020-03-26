@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct App {
+class App {
     static let instance = App()
     
     private(set) public var userBackgroundTasks: [ComicUserBackgroundTask]
+//    public var privateKey: String = ""
     
     init() {
         self.userBackgroundTasks = [
@@ -20,4 +21,6 @@ struct App {
             ComicUserBackgroundTask(id: 2, title: "Read Offline", systemImageName: "arrow.down.to.line")
         ]
     }
+    
+    
 }
