@@ -14,7 +14,9 @@ struct ComicDetailHeaderView: View {
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
             ZStack {
-//                Image(self.comic.Image)
+                if self.comic.image != nil {
+                    Image(uiImage: self.comic.image!)
+                }
                 HStack {
                     Image("")
                         .resizable()
@@ -28,7 +30,7 @@ struct ComicDetailHeaderView: View {
                             }) {
                                 Text("READ NOW")
                                     .font(getHeadlineFontWithContainerSize(container.size.width))
-                                .foregroundColor(Color("PrimaryTextColor"))
+                                    .foregroundColor(Color("PrimaryTextColor"))
                             }
                             .padding()
                             .frame(width: actionContainer.size.width)
@@ -49,7 +51,7 @@ struct ComicDetailHeaderView_Previews: PreviewProvider {
         GeometryReader { (container: GeometryProxy) in
             ComicDetailHeaderView()
                 .frame(height: container.size.height * 0.3)
-
+            
         }
     }
 }

@@ -14,7 +14,6 @@ class Comic: ObservableObject {
     @Published var image: UIImage? = nil
     
     var id: Int?
-    
     var description: String?
     var title: String?
     
@@ -33,7 +32,12 @@ class Comic: ObservableObject {
         
         print("aoenvfojnrae k r \(data["thumbnail"] ?? "NO THUMB")")
         
-//        if let thumbnail = data["thumbnail"] {
+        
+        
+        if let thumb = data["thumbnail"] as? Dictionary<String, Any>{ 
+            print("THUSMNVIKLSNF \(thumb["path"] ?? "wed")")
+            print("THUSMNVIKLSNF \(thumb["extension"] ?? "wed")")
+        }
             
 //            let urlString = "\(thumbnail)"
             

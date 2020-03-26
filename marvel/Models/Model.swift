@@ -28,31 +28,33 @@ class Model {
         ]
         let headers = HTTPHeaders([.accept("application/json")])
         
-                DispatchQueue.main.async {
-        AF.request("https://gateway.marvel.com:443/v1/public/comics",
-                   parameters: parameters,
-                   headers: headers).responseJSON { response in
-                    
-                    if let error = response.error {
-                        DispatchQueue.main.async {
-                            completion(error)
+        DispatchQueue.main.async {
+            AF.request("https://gateway.marvel.com:443/v1/public/comics",
+                       parameters: parameters,
+                       headers: headers).responseJSON { response in
+                        
+                        if let error = response.error {
+                            DispatchQueue.main.async {
+                                completion(error)
+                            }
+                            return
                         }
-                        return
-                    }
-                    
-                    guard let value = response.value as? [String:Any] else {  return }
-                    guard let results = value["data"] as? [String:Any] else { return }
-                    guard let resultsArray = results["results"] as? [Dictionary<String,Any>] else { return }
-                    
-                    self.comics = resultsArray.compactMap({
-                        Comic(data: $0)
-                    })
-                    
-                    DispatchQueue.main.async {
-                        completion(nil)
-                    }
+                        
+                        guard let value = response.value as? [String:Any] else {  return }
+                        guard let results = value["data"] as? [String:Any] else { return }
+                        guard let resultsArray = results["results"] as? [Dictionary<String,Any>] else { return }
+                        
+                        self.comics = resultsArray.compactMap({
+                            Comic(data: $0)
+                        })
+                        
+                        self.comics = self.comics.filter({ $0.id != nil })
+                        
+                        DispatchQueue.main.async {
+                            completion(nil)
+                        }
+            }
         }
-                }
         
     }
 }
