@@ -22,8 +22,9 @@ struct ComicCycleButton: View {
             }
             .frame(width: container.size.width,
                    height: container.size.height)
-            .background(Color("PrimarySystemColor"))
+            .background(Color("SecondarySystemColor"))
             .foregroundColor(Color("PrimaryTextColor"))
+                .cornerRadius(container.size.height * 0.2)
         }
     }
 }

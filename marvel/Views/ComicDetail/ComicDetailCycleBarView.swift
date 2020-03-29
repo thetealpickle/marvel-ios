@@ -17,6 +17,7 @@ struct ComicDetailCycleBarView: View {
                 ComicCycleButton(type: .next)
             }
             .padding()
+        .background(Color("PrimarySystemColor"))
         }
     }
 }

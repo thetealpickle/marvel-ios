@@ -15,36 +15,51 @@ struct ComicDetailView: View {
     
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            self.presentation.wrappedValue.dismiss()
-                        }) {
-                            Image(systemName: "xmark")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+            ZStack(alignment: .bottom) {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                self.presentation.wrappedValue.dismiss()
+                            }) {
+                                Image(systemName: "xmark")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding()
+                            }
+                            .frame(width: container.size.width * 0.12)
+                            .foregroundColor(Color("PrimaryTextColor"))
+                            .padding()
+                        }
+                        ComicDetailHeaderView()
+                            .environmentObject(self.comic)
+                            .frame(height: container.size.height * 0.3)
+                        
+                        VStack(alignment: .leading) {
+                            Text(self.comic.title ?? "Comic Title")
+                                .font(getHeadlineFontWithContainerSize(container.size.width))
+                            
+                            RoundedRectangle(cornerRadius: 30.0)
+                                .frame(height: 1.5)
+                                .padding(.bottom, container.size.height * 0.025)
+                            Text(self.comic.description ?? "Comic Description")
+                                .font(getBodyFontWithContainerSize(container.size.width))
+                                .lineSpacing(container.size.height * 0.015)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.bottom, container.size.height * 0.025)
                         }
                         .padding()
-                        .frame(width: container.size.width * 0.12)
                         .foregroundColor(Color("PrimaryTextColor"))
+                        Spacer()
                     }
-                    .padding([.horizontal, .bottom])
-                    ComicDetailHeaderView()
-                        .environmentObject(self.comic)
-                        .frame(height: container.size.height * 0.3)
-                    ComicDetailMetadataView()
-                        .environmentObject(self.comic)
-                        .frame(width: container.size.width * 0.9,
-                               height: container.size.height * 0.5)
-                    ComicDetailCycleBarView()
-                        .frame(height: container.size.height * 0.1)
-                    Spacer()
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                ComicDetailCycleBarView()
+                    .frame(height: container.size.height * 0.1)
             }
-            .padding(.vertical, container.size.height * 0.08)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.vertical, container.size.height * 0.075)
             .background(Color("PrimarySystemColor"))
             .edgesIgnoringSafeArea(.all)
             .navigationBarBackButtonHidden(true)

@@ -21,11 +21,15 @@ struct ComicDetailHeaderView: View {
                         .frame(height: container.size.height)
                         .blur(radius: 15.0)
                 }
-                HStack(alignment: .center) {
+                HStack(alignment: .center,
+                       spacing: container.size.width * 0.05) {
                     if self.comic.image != nil {
                         Image(uiImage: self.comic.image!)
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: container.size.width * 0.4,
+                                   height: container.size.height)
+                            .clipShape(RoundedRectangle(cornerRadius: container.size.width * 0.02))
                     }
                     GeometryReader { (actionContainer: GeometryProxy) in
                         VStack {
@@ -35,11 +39,12 @@ struct ComicDetailHeaderView: View {
                                 Text("READ NOW")
                                     .font(getHeadlineFontWithContainerSize(container.size.width))
                                     .fixedSize(horizontal: true, vertical: false)
-                                    .foregroundColor(Color("PrimaryTextColor"))
+                                    .foregroundColor(Color(.white))
                             }
                             .padding()
                             .frame(width: actionContainer.size.width)
                             .background(Color("AccentColor"))
+                            .cornerRadius(actionContainer.size.height * 0.05)
                             
                             ComicUserBackgroundTaskListView()
                         }

@@ -22,7 +22,7 @@ struct ComicUserBackgroundButton: View {
                     RoundedRectangle(cornerRadius: container.size.width * 0.01)
                         .frame(width: container.size.width * 0.01)
                     Text(self.data.title)
-                        .font(getHeadlineFontWithContainerSize(container.size.width))
+                        .font(getHeadlineFontWithContainerSize(container.size.width * 1.25))
                         .fixedSize(horizontal: true, vertical: false)
                     Spacer()
             }
@@ -30,6 +30,7 @@ struct ComicUserBackgroundButton: View {
             .padding(.horizontal)
             .frame(width: container.size.width)
             .background(Color("PrimarySystemColor"))
+            .cornerRadius(container.size.width * 0.05)
             .foregroundColor(Color("PrimaryTextColor"))
         }
     }

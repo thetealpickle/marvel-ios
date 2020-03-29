@@ -26,13 +26,7 @@ struct ComicDetailMetadataView: View {
                     .lineSpacing(container.size.height * 0.015)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.bottom, container.size.height * 0.025)
-                HStack(alignment: .center) {
-                    ComicDetailSubdataView(title: "Cover")
-                        .frame(width: container.size.width * 0.5)
-                    ComicDetailSubdataView(title: "Interior")
-                        .frame(width: container.size.width * 0.4)
                     Spacer()
-                }
             }
             .padding()
             .foregroundColor(Color("PrimaryTextColor"))

@@ -45,13 +45,19 @@ class Model {
                         if let jsonData = json["data"] as? Dictionary<String, Any> {
                             if let results = jsonData["results"] as? Array<Dictionary<String, Any>> {
                                 let jsonDecoder = JSONDecoder()
-                                
+                                                                
                                 self.comics = try results.map({
                                     
                                     let comicData = try JSONSerialization.data(withJSONObject: $0, options: [])
                                     return try jsonDecoder.decode(Comic.self, from: comicData)
                                 })
                                 
+                                self.comics = self.comics.filter({
+                                    guard $0.title != nil else { return false}
+                                    guard $0.description != nil else { return false }
+                                    
+                                    return true
+                                })
                                 self.comics.sort(by: { $0.title! < $1.title!})
                                 
                                 completion(true, nil)
