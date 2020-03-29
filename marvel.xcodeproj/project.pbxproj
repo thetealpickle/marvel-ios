@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4EBBCB24314F9600FC9E70 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AF4EBBCA24314F9600FC9E70 /* README.md */; };
 		AF7A8941242BC18900DF187C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8940242BC18900DF187C /* AppDelegate.swift */; };
 		AF7A8943242BC18900DF187C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8942242BC18900DF187C /* SceneDelegate.swift */; };
 		AF7A8947242BC18900DF187C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A8946242BC18900DF187C /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF4EBBCA24314F9600FC9E70 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AF7A893D242BC18900DF187C /* marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7A8940242BC18900DF187C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7A8942242BC18900DF187C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		AF7A8934242BC18800DF187C = {
 			isa = PBXGroup;
 			children = (
+				AF4EBBCA24314F9600FC9E70 /* README.md */,
 				AF7A893F242BC18900DF187C /* marvel */,
 				AF7A8956242BC18A00DF187C /* marvelTests */,
 				AF7A8961242BC18A00DF187C /* marvelUITests */,
@@ -416,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4EBBCB24314F9600FC9E70 /* README.md in Resources */,
 				AF7A894D242BC18900DF187C /* LaunchScreen.storyboard in Resources */,
 				AF7A894A242BC18900DF187C /* Preview Assets.xcassets in Resources */,
 				AF7A9DAD242D13CD0005EBD6 /* Roboto-Regular.ttf in Resources */,

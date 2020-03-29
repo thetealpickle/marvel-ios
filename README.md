@@ -1,27 +1,87 @@
 # Marvel Pickle
 
-HELLO! @THETEALPICKLE HERE. Do you have an affinity for superheros and all things Marvel? New to SwiftUI and the Marvel API? Are you part of the Marvel Mobile Engineering Team? If you answered yes to any of these questions, then this is the repo for YOU!<br>
+HELLO! <a href="https://www.thetealpickle.com">@THETEALPICKLE</a> HERE. Do you have an affinity for superheros and all things Marvel? New to SwiftUI and the Marvel API? Are you part of the Marvel Mobile Engineering Team? If you answered yes to any of these questions, then this is the repo for YOU!<br>
 
 A recreation of the Marvel comic detail view through @thetealpickle lense 👀<br>
 
 ## Project Summary
-This recreation, a 2 day activity, pulls in public comic data from the Marvel API.<br>
-The comics, displayed in a list view once the data has loaded are laid in selectable rows which can be selected to then display the comic detail view.<br>
-
-To keep api keys safe 😬 there is an api key viewer presented on load where, you (FELLOW HUMAN 🥔),
-can input YOUR public and private keys which will then be used to make the call. OKAY COOL 👍🏾.
-
-## Features
+This recreation, pulls in public comic data from the Marvel API.<br>
+The comics are displayed in a list view once the data loads. The lsit rows are selectable and click to a child comic detail view.
 
 ## Folder Navigation
 ALRIGHT, here's the layout
 
-## Libraries and Frameworks
-This project leverages Xcode's built in Swift Package Manager to handle frameworks and libraries.<br>Apple made some nice integrations with Swift Package Manager and Xcode so, I'm using it 🙃<br><br>
+### marvel
+- Info.plist
++ Delegates
+  - AppDelegate
+  - SceneDelegate
 
-There have been some concerns over using Swift Package Manager in the past due to the lack of supporting binaries. But beautiful news PEOPLE! A proposal for binary support was accepted this past December so, SPM is basically the future 💯 soon #noMoreExcuses<br><br>
++ Models
+  - App
+  - Model
+  - SampleData
+  + Comic
+    - Comic
+    - ComicImage
+  + Extensions
+    - X10+Swift
+  + View Models
+    - ComicUserBackgroundTask
+    - ComicCycleType
+  
++ Resources
+  - Assets
+  + Fonts
+    - Roboto-Regular
+    - Roboto-Black
+  + Storyboards
+    - LaunchScreen
+  
++ Utilities
+  - Constants
+  
++ Views
+  - RootView
+  + Comic List
+    - ComicListView
+    - ComicListRowView
+  + Comic Detail
+    - ComicDetailView
+    - ComicUserBackgroundTaskListView
+    - ComicDetailHeaderView
+    - ComicDetailCycleBarView
+  + Elements
+    + Comic Detail
+      - ComicUserBackgroundButton
+      - ComicCycleButton
+      
+### marvelTests target
+- ComicTests
+- ModelTests
+- Info.plist
+
+### marvelUITests target
+- marvelUITests
+- Info.plist
+
+## Setup
+To run this project update the Model file apiKey and privateKey properties with your Marvel developer api public key and private key. Otherwise, where will the data come from? 🤯
+
+## Features
+This project has 
+- live data pulling
+- dark/light mode support (try it out 🌚🌝)
+- dynamic text sizing #accessibility 💋
+- tests [ui/unit]
+
+## Third Party Libraries and Frameworks
+None 😜 
 
 ## Data
+Data is retrieved from the <a href="https://developer.marvel.com">Marvel API</a> 
+
 ## Networking 
+Handled with URLSession.
 
 THIS IS A THETEALPICKLE CREATION. © 2020 JESSICA JEAN JOSEPH 
