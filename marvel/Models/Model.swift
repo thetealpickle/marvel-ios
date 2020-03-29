@@ -53,6 +53,7 @@ class Model {
                                 })
                                 
                                 self.comics.sort(by: { $0.title! < $1.title!})
+                                
                                 completion(true, nil)
                             }
                         }

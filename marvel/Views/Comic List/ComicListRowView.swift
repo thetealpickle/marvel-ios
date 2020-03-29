@@ -19,8 +19,9 @@ struct ComicListRowView: View {
                         Image(uiImage: self.comic.image!)
                             .renderingMode(.original)
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height: container.size.height)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: container.size.width * 0.25,
+                                   height: container.size.height)
                             .clipShape(RoundedRectangle(cornerRadius: container.size.height * 0.2))
                     }
                     VStack(alignment: .leading,
