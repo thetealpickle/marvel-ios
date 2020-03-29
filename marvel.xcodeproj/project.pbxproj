@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,6 @@
 		AF7A898E242BCE4600DF187C /* ComicDetailSubdataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A898D242BCE4600DF187C /* ComicDetailSubdataView.swift */; };
 		AF7A8993242BE0B300DF187C /* ComicDetailCycleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8992242BE0B300DF187C /* ComicDetailCycleBarView.swift */; };
 		AF7A8995242BE3F300DF187C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8994242BE3F300DF187C /* Model.swift */; };
-		AF7A9DA0242C26330005EBD6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AF7A9D9F242C26330005EBD6 /* Alamofire */; };
 		AF7A9DA3242CF1C50005EBD6 /* X10+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA2242CF1C50005EBD6 /* X10+String.swift */; };
 		AF7A9DA6242CF4C40005EBD6 /* ComicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA5242CF4C40005EBD6 /* ComicImage.swift */; };
 		AF7A9DA8242CFADE0005EBD6 /* ComicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */; };
@@ -99,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7A9DA0242C26330005EBD6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +182,8 @@
 		AF7A8970242BC1EF00DF187C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A8973242BC23D00DF187C /* ComicDetailView.swift */,
-				AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */,
+				AF7A8985242BC96200DF187C /* ComicDetail */,
+				AF7A9DB3242D1EA90005EBD6 /* Comic List */,
 				AF7A8971242BC22B00DF187C /* RootView.swift */,
 				AF7A8980242BC68F00DF187C /* Elements */,
 				AF7A8975242BC24A00DF187C /* Supporting Views */,
@@ -196,8 +194,6 @@
 		AF7A8975242BC24A00DF187C /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A9DB3242D1EA90005EBD6 /* Comic List */,
-				AF7A8985242BC96200DF187C /* ComicDetail */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -233,6 +229,7 @@
 		AF7A8985242BC96200DF187C /* ComicDetail */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A8973242BC23D00DF187C /* ComicDetailView.swift */,
 				AF7A8981242BC6D200DF187C /* ComicUserBackgroundTaskListView.swift */,
 				AF7A8987242BC9A900DF187C /* ComicDetailHeaderView.swift */,
 				AF7A898B242BCD1600DF187C /* ComicDetailMetadataView.swift */,
@@ -308,6 +305,7 @@
 		AF7A9DB3242D1EA90005EBD6 /* Comic List */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A9DA7242CFADE0005EBD6 /* ComicListView.swift */,
 				AF7A9DB6242D1EDF0005EBD6 /* ComicListRowView.swift */,
 			);
 			path = "Comic List";
@@ -330,7 +328,6 @@
 			);
 			name = marvel;
 			packageProductDependencies = (
-				AF7A9D9F242C26330005EBD6 /* Alamofire */,
 			);
 			productName = marvel;
 			productReference = AF7A893D242BC18900DF187C /* marvel.app */;
@@ -405,7 +402,6 @@
 			);
 			mainGroup = AF7A8934242BC18800DF187C;
 			packageReferences = (
-				AF7A9D9E242C26330005EBD6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = AF7A893E242BC18900DF187C /* Products */;
 			projectDirPath = "";
@@ -650,7 +646,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thetealpickle.marvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -670,7 +666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thetealpickle.marvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -680,9 +676,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G87HUM96UL;
+				DEVELOPMENT_TEAM = NFD5C5B8X2;
 				INFOPLIST_FILE = marvelTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,9 +698,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G87HUM96UL;
+				DEVELOPMENT_TEAM = NFD5C5B8X2;
 				INFOPLIST_FILE = marvelTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,7 +719,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G87HUM96UL;
+				DEVELOPMENT_TEAM = NFD5C5B8X2;
 				INFOPLIST_FILE = marvelUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -743,7 +739,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G87HUM96UL;
+				DEVELOPMENT_TEAM = NFD5C5B8X2;
 				INFOPLIST_FILE = marvelUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -798,25 +794,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AF7A9D9E242C26330005EBD6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AF7A9D9F242C26330005EBD6 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF7A9D9E242C26330005EBD6 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF7A8935242BC18800DF187C /* Project object */;
 }

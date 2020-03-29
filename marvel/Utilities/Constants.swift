@@ -29,7 +29,11 @@ func getBodyFontWithContainerSize(_ size: CGFloat) -> Font {
 // MARK: Networking
 let BASE_URL = "https://gateway.marvel.com:443/"
 let API_VERSION = "v1"
-let COMICS_URL = "/public/comics"
+
+
+enum MarvelURLType: String {
+    case comic = "/public/comics"
+}
 
 
 let API_KEY = "4c7c8b0a5e0d5391e27cd2c74b0207a6"

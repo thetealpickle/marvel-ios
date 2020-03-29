@@ -26,8 +26,8 @@ struct RootView: View {
             .background(Color("PrimarySystemColor"))
             .edgesIgnoringSafeArea(.all)
             .onAppear {
-                Model.instance.getComics { (error) in
-                    if error == nil {
+                Model.instance.getComics { (success, error) in
+                    if success {
                         self.showMainView = true
                     }
                 }
