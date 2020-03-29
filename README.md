@@ -4,6 +4,8 @@ HELLO! <a href="https://www.thetealpickle.com">@THETEALPICKLE</a> HERE. Do you h
 
 A recreation of the Marvel comic detail view through @thetealpickle lense 👀<br>
 
+<img src="demo/marvel001.png" width="25%"/> <img src="demo/marvel002.png" width="25%"/> <img src="demo/marvel003.png" width="25%"/>
+
 ## Project Summary
 This recreation, pulls in public comic data from the Marvel API.<br>
 The comics are displayed in a list view once the data loads. The lsit rows are selectable and click to a child comic detail view.
