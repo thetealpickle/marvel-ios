@@ -9,16 +9,6 @@
 import SwiftUI
 
 struct ComicListView: View {
-    let comics: [Comic]
-    
-    init() {
-        #if targetEnvironment(simulator)
-        self.comics = SampleData.instance.comics
-        #else
-        self.comics = Model.instance.comics
-        #endif
-    }
-    
     var body: some View {
         NavigationView {
             GeometryReader { (container: GeometryProxy) in
@@ -29,7 +19,7 @@ struct ComicListView: View {
                                 .font(getHeadlineFontWithContainerSize(container.size.width))
                                 .foregroundColor(Color("PrimaryTextColor"))
                                 .padding(.top, container.size.height * 0.07)
-                        ForEach(self.comics, id:\.self.id) { comic in
+                            ForEach(Model.instance.comics, id:\.self.id) { comic in
                             NavigationLink(destination: ComicDetailView(comic: comic)) {
                                 ComicListRowView()
                                 .environmentObject(comic)

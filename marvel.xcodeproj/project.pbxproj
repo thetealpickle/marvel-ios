@@ -12,7 +12,6 @@
 		AF7A8947242BC18900DF187C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A8946242BC18900DF187C /* Assets.xcassets */; };
 		AF7A894A242BC18900DF187C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A8949242BC18900DF187C /* Preview Assets.xcassets */; };
 		AF7A894D242BC18900DF187C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7A894B242BC18900DF187C /* LaunchScreen.storyboard */; };
-		AF7A8958242BC18A00DF187C /* marvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8957242BC18A00DF187C /* marvelTests.swift */; };
 		AF7A8963242BC18A00DF187C /* marvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8962242BC18A00DF187C /* marvelUITests.swift */; };
 		AF7A8972242BC22B00DF187C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8971242BC22B00DF187C /* RootView.swift */; };
 		AF7A8974242BC23D00DF187C /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A8973242BC23D00DF187C /* ComicDetailView.swift */; };
@@ -36,6 +35,8 @@
 		AF7A9DAF242D1A200005EBD6 /* ComicCycleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DAE242D1A200005EBD6 /* ComicCycleButton.swift */; };
 		AF7A9DB2242D1A850005EBD6 /* ComicCycleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DB1242D1A850005EBD6 /* ComicCycleType.swift */; };
 		AF7A9DB7242D1EDF0005EBD6 /* ComicListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9DB6242D1EDF0005EBD6 /* ComicListRowView.swift */; };
+		AFA3F553243124EC0022F86D /* ComicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3F552243124EB0022F86D /* ComicTests.swift */; };
+		AFA3F555243125DA0022F86D /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3F554243125DA0022F86D /* ModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,6 @@
 		AF7A894C242BC18900DF187C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF7A894E242BC18900DF187C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7A8953242BC18A00DF187C /* marvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF7A8957242BC18A00DF187C /* marvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelTests.swift; sourceTree = "<group>"; };
 		AF7A8959242BC18A00DF187C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7A895E242BC18A00DF187C /* marvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7A8962242BC18A00DF187C /* marvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelUITests.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		AF7A9DAE242D1A200005EBD6 /* ComicCycleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCycleButton.swift; sourceTree = "<group>"; };
 		AF7A9DB1242D1A850005EBD6 /* ComicCycleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCycleType.swift; sourceTree = "<group>"; };
 		AF7A9DB6242D1EDF0005EBD6 /* ComicListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListRowView.swift; sourceTree = "<group>"; };
+		AFA3F552243124EB0022F86D /* ComicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTests.swift; sourceTree = "<group>"; };
+		AFA3F554243125DA0022F86D /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +166,9 @@
 		AF7A8956242BC18A00DF187C /* marvelTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A8957242BC18A00DF187C /* marvelTests.swift */,
 				AF7A8959242BC18A00DF187C /* Info.plist */,
+				AFA3F552243124EB0022F86D /* ComicTests.swift */,
+				AFA3F554243125DA0022F86D /* ModelTests.swift */,
 			);
 			path = marvelTests;
 			sourceTree = "<group>";
@@ -182,9 +185,9 @@
 		AF7A8970242BC1EF00DF187C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A8985242BC96200DF187C /* ComicDetail */,
-				AF7A9DB3242D1EA90005EBD6 /* Comic List */,
 				AF7A8971242BC22B00DF187C /* RootView.swift */,
+				AF7A9DB3242D1EA90005EBD6 /* Comic List */,
+				AF7A8985242BC96200DF187C /* ComicDetail */,
 				AF7A8980242BC68F00DF187C /* Elements */,
 			);
 			path = Views;
@@ -193,11 +196,11 @@
 		AF7A8978242BC2C900DF187C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A9DB0242D1A580005EBD6 /* View Models */,
-				AF7A9DA4242CF4AE0005EBD6 /* Comic */,
-				AF7A897B242BC32D00DF187C /* SampleData.swift */,
 				AF7A8983242BC76300DF187C /* App.swift */,
 				AF7A8994242BE3F300DF187C /* Model.swift */,
+				AF7A897B242BC32D00DF187C /* SampleData.swift */,
+				AF7A9DA4242CF4AE0005EBD6 /* Comic */,
+				AF7A9DB0242D1A580005EBD6 /* View Models */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,9 +246,9 @@
 		AF7A8990242BDCF900DF187C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A9DA9242D13A50005EBD6 /* Fonts */,
-				AF7A894B242BC18900DF187C /* LaunchScreen.storyboard */,
 				AF7A8946242BC18900DF187C /* Assets.xcassets */,
+				AF7A9DA9242D13A50005EBD6 /* Fonts */,
+				AFA3F551243123E70022F86D /* Storyboards */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -301,6 +304,14 @@
 				AF7A9DB6242D1EDF0005EBD6 /* ComicListRowView.swift */,
 			);
 			path = "Comic List";
+			sourceTree = "<group>";
+		};
+		AFA3F551243123E70022F86D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A894B242BC18900DF187C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,7 +480,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7A8958242BC18A00DF187C /* marvelTests.swift in Sources */,
+				AFA3F553243124EC0022F86D /* ComicTests.swift in Sources */,
+				AFA3F555243125DA0022F86D /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

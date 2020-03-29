@@ -23,6 +23,11 @@ class Model {
     /// Fetches a list of public comics over the network
     /// - Parameter completion: a callback closure with a boolean  parameter denoting data download success and an optional error parameter
     func getComics(completion: @escaping (_ success: Bool,_ error: Error?) -> Void) {
+        #if targetEnvironment(simulator)
+        self.comics = SampleData.instance.comics
+        completion(true, nil)
+        
+        #else
         guard let comicsUrl = getURLFor(.comics) else {
             completion(false, nil)
             return
@@ -73,6 +78,7 @@ class Model {
         }
         
         task.resume()
+        #endif
     }
     
     // MARK: - Private Helper Methods
