@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ComicListView: View {
+    @Environment(\.sizeCategory) var sizeCategory
+    
     var body: some View {
         NavigationView {
             GeometryReader { (container: GeometryProxy) in
