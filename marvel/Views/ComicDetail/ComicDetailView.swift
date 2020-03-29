@@ -39,7 +39,6 @@ struct ComicDetailView: View {
                         VStack(alignment: .leading) {
                             Text(self.comic.title ?? "Comic Title")
                                 .font(getHeadlineFontWithContainerSize(container.size.width))
-                            
                             RoundedRectangle(cornerRadius: 30.0)
                                 .frame(height: 1.5)
                                 .padding(.bottom, container.size.height * 0.025)

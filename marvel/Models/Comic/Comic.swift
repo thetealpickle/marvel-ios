@@ -39,7 +39,7 @@ class Comic: Codable, ObservableObject {
         self.title = try container.decodeIfPresent(String.self, forKey: .title)
         self.description = try container.decodeIfPresent(String.self, forKey: .description)
         self.coverImage = try container.decodeIfPresent(ComicImage.self, forKey: .coverImage)
-
+        
         if let cover = self.coverImage {
             guard let path = cover.path else { return }
             guard let ext = cover.ext else { return }
@@ -54,6 +54,9 @@ class Comic: Codable, ObservableObject {
                 }
             // }
         }
+        
+        guard let description = self.description else { return }
+        self.description = description.replacingOccurrences(of: "<br>", with: "\n\n")
     }
     
     func encode(to encoder: Encoder) throws {

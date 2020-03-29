@@ -143,7 +143,6 @@
 		AF7A893F242BC18900DF187C /* marvel */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A9DA1242CF1A00005EBD6 /* Extensions */,
 				AF7A894E242BC18900DF187C /* Info.plist */,
 				AF7A8991242BDD0600DF187C /* Delegates */,
 				AF7A8978242BC2C900DF187C /* Models */,
@@ -200,6 +199,7 @@
 				AF7A8994242BE3F300DF187C /* Model.swift */,
 				AF7A897B242BC32D00DF187C /* SampleData.swift */,
 				AF7A9DA4242CF4AE0005EBD6 /* Comic */,
+				AF7A9DA1242CF1A00005EBD6 /* Extensions */,
 				AF7A9DB0242D1A580005EBD6 /* View Models */,
 			);
 			path = Models;

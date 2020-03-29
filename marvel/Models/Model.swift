@@ -12,8 +12,8 @@ import SwiftUI
 class Model {
     static let instance = Model()
     
-    private var apiKey: String? = "4c7c8b0a5e0d5391e27cd2c74b0207a6"
-    private var privateKey: String? = "dec3ee9ef7483796740003e3517f9af4c1bb3369"
+    private var apiKey: String? = "YOUR_API_KEY_HERE"
+    private var privateKey: String? = "YOUR_PRIVATE_KEY_HERE"
     
     private(set) public var comics: [Comic] = []
     
