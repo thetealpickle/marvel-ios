@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct RootView: View {
-    @State var stri: String = "loading"
+    @State var stri: String = "loading data"
     @State var showMainView: Bool = false
-    
+
     var body: some View {
         GeometryReader { (container: GeometryProxy) in
             ZStack {
@@ -20,6 +20,8 @@ struct RootView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     Text(self.stri)
+                        .font(getHeadlineFontWithContainerSize(container.size.width))
+                    .foregroundColor(Color("PrimaryTextColor"))
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -27,6 +29,10 @@ struct RootView: View {
             .edgesIgnoringSafeArea(.all)
             .onAppear {
                 Model.instance.getComics { (success, error) in
+                    if error != nil {
+                        self.stri = "error loading data 😢 \n check your network and try again"
+                    }
+                    
                     if success {
                         self.showMainView = true
                     }

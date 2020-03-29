@@ -186,16 +186,8 @@
 				AF7A9DB3242D1EA90005EBD6 /* Comic List */,
 				AF7A8971242BC22B00DF187C /* RootView.swift */,
 				AF7A8980242BC68F00DF187C /* Elements */,
-				AF7A8975242BC24A00DF187C /* Supporting Views */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		AF7A8975242BC24A00DF187C /* Supporting Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
 		AF7A8978242BC2C900DF187C /* Models */ = {

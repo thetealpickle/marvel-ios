@@ -8,8 +8,15 @@
 
 import SwiftUI
 
-// MARK: Font Stylizing
+// MARK: - Networking
+let BASE_URL = "https://gateway.marvel.com:443/"
+let API_VERSION = "v1"
 
+enum MarvelURLType: String {
+    case comics = "/public/comics"
+}
+
+// MARK: - Font Stylizing
 let HEADLINE_FONT = "Roboto-Black"
 let BODY_FONT = "Roboto-Regular"
 
@@ -26,14 +33,3 @@ func getBodyFontWithContainerSize(_ size: CGFloat) -> Font {
     return Font.custom(BODY_FONT, size: scaledSize)
 }
 
-// MARK: Networking
-let BASE_URL = "https://gateway.marvel.com:443/"
-let API_VERSION = "v1"
-
-
-enum MarvelURLType: String {
-    case comic = "/public/comics"
-}
-
-
-let API_KEY = "4c7c8b0a5e0d5391e27cd2c74b0207a6"

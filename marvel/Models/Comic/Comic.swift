@@ -46,10 +46,13 @@ class Comic: Codable, ObservableObject {
             
             let imageUrl = "\(path).\(ext)"
             
-            if let data = try? Data(contentsOf: URL(string: imageUrl)!),
-                let uiImage = UIImage(data: data) {
-                self.image = uiImage
-            }
+            // Uncomment the following block for asynchronous images loading
+            // DispatchQueue.main.async {
+                if let data = try? Data(contentsOf: URL(string: imageUrl)!),
+                    let uiImage = UIImage(data: data) {
+                    self.image = uiImage
+                }
+            // }
         }
     }
     
@@ -69,5 +72,4 @@ class Comic: Codable, ObservableObject {
         case title
         case coverImage = "thumbnail"
     }
-    
 }

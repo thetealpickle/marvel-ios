@@ -25,7 +25,7 @@ struct ComicListView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading,
                            spacing: container.size.height * 0.05) {
-                            Text("Public Comic List")
+                            Text("Comic List")
                                 .font(getHeadlineFontWithContainerSize(container.size.width))
                                 .foregroundColor(Color("PrimaryTextColor"))
                                 .padding(.top, container.size.height * 0.07)

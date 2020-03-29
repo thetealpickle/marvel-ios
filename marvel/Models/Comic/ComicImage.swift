@@ -13,11 +13,18 @@ struct ComicImage: Codable {
     var ext: String?
     
     init(from decoder: Decoder) throws {
-          let container = try decoder.container(keyedBy: ComicImageCodingKeys.self)
-          
-          self.path = try container.decodeIfPresent(String.self, forKey: .path)
-          self.ext = try container.decodeIfPresent(String.self, forKey: .ext)
-      }
+        let container = try decoder.container(keyedBy: ComicImageCodingKeys.self)
+        
+        self.path = try container.decodeIfPresent(String.self, forKey: .path)
+        self.ext = try container.decodeIfPresent(String.self, forKey: .ext)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: ComicImageCodingKeys.self)
+        
+        try container.encodeIfPresent(self.path, forKey: .path)
+        try container.encodeIfPresent(self.ext, forKey: .ext)
+    }
     
     enum ComicImageCodingKeys: String, CodingKey{
         case path

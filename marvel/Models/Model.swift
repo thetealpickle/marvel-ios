@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Manages all model data and associated operations such as fetching and  uploading
 class Model {
     static let instance = Model()
     
@@ -16,12 +17,13 @@ class Model {
     
     private(set) public var comics: [Comic] = []
     
+    // MARK: - Data Fetching
+    // MARK: [Fetch] Comics
     
-    
-    
+    /// Fetches a list of public comics over the network
+    /// - Parameter completion: a callback closure with a boolean  parameter denoting data download success and an optional error parameter
     func getComics(completion: @escaping (_ success: Bool,_ error: Error?) -> Void) {
-        
-        guard let comicsUrl = getURLFor(.comic) else {
+        guard let comicsUrl = getURLFor(.comics) else {
             completion(false, nil)
             return
         }
@@ -30,9 +32,7 @@ class Model {
         let urlSession = URLSession.init(configuration: urlConfig,
                                          delegate: nil,
                                          delegateQueue: .main)
-        
-        print(comicsUrl)
-        
+                
         let task = urlSession.dataTask(with: comicsUrl) { (data, response, error) in
             if let err = error {
                 debugPrint("[NETWORKING ERR]: \(err)")
@@ -69,7 +69,7 @@ class Model {
         task.resume()
     }
     
-    // MARK: Private Helper Methods
+    // MARK: - Private Helper Methods
     private func appendParametersToURLString(_ urlString: inout String) {
         guard let apiKey = self.apiKey else { return }
         guard let privateKey = self.privateKey else { return }
@@ -93,6 +93,9 @@ class Model {
         urlString.removeLast()
     }
     
+    /// Creates a URL
+    /// - Parameter urlType: the type of url to be created
+    /// - Returns: an optional URL
     private func getURLFor(_ urlType: MarvelURLType) -> URL? {
         var urlString = "\(BASE_URL)\(API_VERSION)\(urlType.rawValue)"
         appendParametersToURLString(&urlString)
